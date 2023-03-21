@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 
 /**
  * jack_bauer - print 24H all day time
