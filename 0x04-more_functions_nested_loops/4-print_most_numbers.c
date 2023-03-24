@@ -1,6 +1,8 @@
 #include "main.h"
 /**
- * print_most_numbers - function that prints the numbers, from 0 to 9 expect 2 and 4
+ * print_most_numbers - function that prints the numbers,
+ * from 0 to 9 expect 2 and 4
+ *
  * Return:  0
  */
 
