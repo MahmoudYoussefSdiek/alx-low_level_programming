@@ -12,6 +12,6 @@
 
 int main(int argc, char *argv[])
 {
-	printf("%s\n", argv[argc - strlen(argv)]);
+	printf("%s\n", argv[argc - strlen(*argv)]);
 	return (0);
 }
