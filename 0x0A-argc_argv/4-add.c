@@ -17,6 +17,11 @@ int main(int argc, char *argv[])
 	int sum = 0;
 	char c;
 
+	if (argc == 1)
+	{
+		printf("0\n");
+		return (0);
+	}
 	for (i = 1; i < argc; i++)
 	{
 		c = *argv[i];
@@ -27,6 +32,7 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
+
 			printf("Error\n");
 			return (1);
 		}
