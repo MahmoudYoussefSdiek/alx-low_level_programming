@@ -20,7 +20,7 @@ int **alloc_grid(int width, int height)
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	array = calloc(sizeof(int), height);
+	array = calloc(sizeof(int *), height);
 	if (array == NULL)
 		return (NULL);
 
@@ -35,5 +35,6 @@ int **alloc_grid(int width, int height)
 			return (NULL);
 		}
 	}
+
 	return (array);
 }
