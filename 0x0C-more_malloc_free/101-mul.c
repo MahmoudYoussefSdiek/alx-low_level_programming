@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 	length2 = _strlen(string_2);
 	memory_s = length1 + length2 + 1;
 	result = malloc(sizeof(int) * memory_s);
-	if (result == NULL)
+	if (!result)
 		return (1);
 	for (i = 0; i <= length1 + length2; i++)
 		result[i] = 0;
@@ -87,12 +87,12 @@ int main(int argc, char *argv[])
 	}
 	for (i = 0; i < memory_s - 1; i++)
 	{
-		if (result[i] != 0)
+		if (result[i])
 			flag = 1;
-		if (flag != 0)
+		if (flag)
 			_putchar(result[i] + '0');
 	}
-	if (flag == 0)
+	if (!flag)
 		_putchar('0');
 	_putchar('\n');
 	free(result);
