@@ -1,8 +1,8 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * print_opcodes - print the opcodes of this program
+ * print_opcodes - print the opcodes
  *
  * @a: address of the main function
  * @n: number of bytes
