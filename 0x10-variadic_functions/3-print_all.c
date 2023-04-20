@@ -16,7 +16,7 @@ void print_all(const char *const format, ...)
 	length = strlen(format);
 	va_start(ap, format);
 	index = 0;
-	while (format != NULL && format[index] != '\0')
+	while (format != NULL && index < length)
 	{
 		flag = 0;
 		switch (format[index])
@@ -25,7 +25,7 @@ void print_all(const char *const format, ...)
 				printf("%c", va_arg(ap, int));
 				break;
 			case 'i':
-				printf("%i", va_arg(ap, int));
+				printf("%d", va_arg(ap, int));
 				break;
 			case 'f':
 				printf("%f", va_arg(ap, double));
