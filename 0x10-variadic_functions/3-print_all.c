@@ -16,7 +16,7 @@ void print_all(const char *const format, ...)
 	length = strlen(format);
 	va_start(ap, format);
 	index = 0;
-	while (format != NULL && index < length)
+	while (format != NULL && format[index] != '\0')
 	{
 		flag = 0;
 		switch (format[index])
