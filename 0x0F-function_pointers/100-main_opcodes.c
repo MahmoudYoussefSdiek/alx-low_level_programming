@@ -41,7 +41,7 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 	numbers = atoi(argv[1]);
-	if (n < 0)
+	if (numbers < 0)
 	{
 		printf("Error\n");
 		exit(2);
