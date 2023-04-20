@@ -3,8 +3,8 @@
 /**
  * print_numbers - function that prints numbers, followed by a new line.
  *
- * @n: number of parameter
  * @separator: separator between numbers
+ * @n: number of parameters
  *
  * Return: void
  */
