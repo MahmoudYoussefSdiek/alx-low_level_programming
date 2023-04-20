@@ -40,7 +40,7 @@ void print_all(const char *const format, ...)
 				flag = 1;
 				break;
 		}
-		if (index < length - 1 && flag == 0)
+		if (index < (length - 1) && flag == 0)
 			printf(", ");
 		index++;
 	}
