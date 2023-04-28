@@ -3,7 +3,7 @@
 /**
  * add_node - function that adds a new node at the beginning of a list_t list.
  *
- * @head: head of list.
+ * @head: list of nodes.
  * @str: value to insert into element.
  *
  * Return: new_node or NULL.
