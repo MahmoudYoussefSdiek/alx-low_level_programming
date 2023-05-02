@@ -6,18 +6,20 @@
  *
  * @head: pointer to pointer to list of nodes.
  *
- * Return: (*head)->n or 0
+ * Return: n or 0
  */
 int pop_listint(listint_t **head)
 {
 	listint_t *first_node;
+	int n;
 
 	if (*head == NULL)
 		return (0);
 
+	n = (*head)->n;
 	first_node = *head;
 	*head = (*head)->next;
 
 	free(first_node);
-	return ((*head)->n);
+	return (n);
 }
