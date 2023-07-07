@@ -101,7 +101,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 }
 
 /**
- * shash_table_get - function that adds an element in a hash table
+ * shash_table_get - function that gets an element in a hash table
  *
  * @ht: The hash table
  * @key: The key string
@@ -130,7 +130,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 }
 
 /**
- * shash_table_print - function that adds an element in a hash table
+ * shash_table_print - function that prints a hash table
  *
  * @ht: The hash table
  *
@@ -162,7 +162,7 @@ void shash_table_print(const shash_table_t *ht)
 }
 
 /**
- * shash_table_print_rev - function that adds an element in a hash table
+ * shash_table_print_rev - function that prints a hash table in reverse
  *
  * @ht: The hash table
  *
@@ -171,30 +171,24 @@ void shash_table_print(const shash_table_t *ht)
 void shash_table_print_rev(const shash_table_t *ht)
 {
 	shash_node_t *node;
-	int flag = 0;
-	unsigned long int i;
 
 	if (ht == NULL)
 		return;
 
+	node = ht->stail;
 	printf("{");
-	for (i = ht->size - 1; i >= 0; i--)
+	while (node != NULL)
 	{
-		node = ht->array[i];
-		while (node != NULL)
-		{
-			if (flag == 1)
-				printf(", ");
-			printf("'%s': '%s'", node->key, node->value);
-			flag = 1;
-			node = node->next;
-		}
+		printf("'%s': '%s'", node->key, node->value);
+		node = node->sprev;
+		if (node != NULL)
+			printf(", ");
 	}
 	printf("}\n");
 }
 
 /**
- * shash_table_delete - function that adds an element in a hash table
+ * shash_table_delete - function that deletes a hash table
  *
  * @ht: The hash table
  *
