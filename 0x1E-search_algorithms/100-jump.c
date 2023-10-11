@@ -42,3 +42,16 @@ int jump_search(int *array, size_t size, int value)
 
 	return (-1);
 }
+
+/**
+ * min - finds the minimum value of two integers
+ *
+ * @a: first integer
+ * @b: second integer
+ *
+ * Return: minimum
+ */
+int min(int a, int b)
+{
+	return (a < b ? a : b);
+}
